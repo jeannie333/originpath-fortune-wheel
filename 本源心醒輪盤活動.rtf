@@ -1,10 +1,7 @@
 {\rtf1\ansi\ansicpg950\cocoartf2821
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 .AppleColorEmojiUI;\f2\fnil\fcharset136 PingFangTC-Regular;
-\f3\fnil\fcharset136 .CJKSymbolsFallbackTC-Regular;}
-{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red253\green177\blue24;\red255\green255\blue255;
-}
-{\*\expandedcolortbl;;\csgray\c100000\c90000;\cspthree\c96064\c75172\c28165\c80000;\csgray\c100000\c18000;
-}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgray\c100000\c90000;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl360\slmult1\slminimum640\pardirnatural\partightenfactor0
 
@@ -13,14 +10,7 @@
 <head>\
     <meta charset="UTF-8">\
     <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>
-\f1 \uc0\u55356 \u57249 
-\f2 \'a5\'bb\'b7\'bd\'a4\'df\'bf\'f4
-\f3 \'a1\'45
-\f2 \'b7\'73\'a6\'7e\'a6\'6e\'b9\'42\'b0\'54\'ae\'a7\cb3 \'bd\'fc\'bd\'4c
-\f0 \cb1  
-\f1 \uc0\u55357 \u56629 
-\f0 </title>\
+    <title>\uc0\u55356 \u57249 \u26412 \u28304 \u24515 \u37266 \u12539 \u26032 \u24180 \u22909 \u36939 \u35338 \u24687 \u36650 \u30436  \u55357 \u56629 </title>\
     <style>\
         body \{\
             font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;\
@@ -36,9 +26,9 @@
         \}\
         #wheel-container \{\
             position: relative;\
-            width: 600px;\
-            height: 600px;\
-            margin: 50px auto;\
+            width: 400px;\
+            height: 400px;\
+            margin: 20px auto;\
         \}\
         canvas \{\
             width: 100%;\
@@ -65,7 +55,7 @@
             font-size: 20px;\
             color: #34371a;\
         \}\
-    #pointer \{\
+        #pointer \{\
             position: absolute;\
             top: -20px;\
             left: 50%;\
@@ -77,73 +67,24 @@
             transform: translateX(-50%);\
             z-index: 10;\
         \}\
-            transform: translateX(-50%);\
-            z-index: 10;\
-        \}\
-            transform: translateX(-50%);\
-        \}\
     </style>\
 </head>\
 <body>\
-    <h1>
-\f1 \uc0\u55356 \u57249 
-\f2 \'a5\'bb\'b7\'bd\'a4\'df\'bf\'f4
-\f3 \'a1\'45
-\f2 \'b7\'73\'a6\'7e\'a6\'6e\'b9\'42\'b0\'54\'ae\'a7\cb3 \'bd\'fc\'bd\'4c
-\f0 \cb1  
-\f1 \uc0\u55357 \u56629 
-\f0 </h1>\
-    <p>
-\f1 \uc0\u10024 
-\f2 \'c2\'e0\'b0\'ca\cb3 \'bd\'fc\'bd\'4c\cb1 \'a1\'41\'b4\'a6\'a5\'dc\'a7\'41\'aa\'ba
-\f0 2025 
-\f2 \'aa\'ba\'b4\'bc\'bc\'7a\'b0\'54\'ae\'a7
-\f0  
-\f1 \uc0\u10024 
-\f0 </p>\
-    <p>
-\f2 \'a7\'41\'aa\'ba\'a4\'ba\'a6\'62\'a4\'77\'aa\'be\'b5\'aa\'ae\'d7\'a1\'41\'b3\'6f\'a6\'b8\'a1\'41\'c5\'fd\'ac\'79\'c2\'e0\'aa\'ba\'af\'e0\'b6\'71\'ac\'b0\'a7\'41\'ab\'fc\'a4\'de\'a4\'e8\'a6\'56
-\f0 </p>\
-    <p><strong>
-\f2 \'a8\'42\'c6\'4a\'a1\'47
-\f0 </strong></p>\
-    <p>
-\f1 \uc0\u55356 \u57151 
-\f0  
-\f2 \'c2\'e0\'b0\'ca\cb3 \'bd\'fc\'bd\'4c\cb1 \'a1\'41\'c0\'f2\'b1\'6f\'a4\'40\'ad\'d3\'b1\'4d\'c4\'dd\'a9\'f3\'a7\'41\'aa\'ba\'b7\'73\'a6\'7e\'c3\'f6\'c1\'e4\'a6\'72\'a9\'ce\'b6\'48\'bc\'78\'bc\'c6\'a6\'72\'a1\'43
-\f0 <br>\
-       
-\f1 \uc0\u55357 \u56553 
-\f0  
-\f2 \'a7\'e2\'a7\'41\'aa\'ba\'b5\'b2\'aa\'47\'b6\'c7\'b0\'65\'a6\'dc\'a5\'bb\'b7\'bd\'a4\'df\'bf\'f4
-\f0  Instagram 
-\f2 \'a8\'70\'b0\'54\'a1\'41\'a7\'da\'b1\'4e\'ac\'b0\'a7\'41\'b8\'d1\'c5\'aa\'b3\'6f\'ad\'d3\'b0\'54\'ae\'a7\'a1\'41\'a8\'c3\'b0\'65\'a4\'57\'a4\'40\'b1\'69\'b9\'71\'a4\'6c\'a5\'64\'a4\'f9\'a1\'43
-\f0 <br>\
-       
-\f1 \uc0\u10024 
-\f0  
-\f2 \'a6\'62\'a5\'64\'a4\'f9\'a4\'a4\'a1\'41\'a7\'41\'b1\'4e\'a6\'ac\'a8\'ec\'a8\'d3\'a6\'db\'a5\'bb\'b7\'bd\'a4\'df\'bf\'f4\'aa\'ba\'b4\'bc\'bc\'7a\'af\'ac\'ba\'d6\'bb\'50\'ac\'7d\'a8\'a3\'a1\'41\'c0\'b0\'a7\'55\'a7\'41\'a7\'f3\'b2\'4d\'b4\'b7\'a6\'61\'ac\'dd\'a8\'a3\'a6\'db\'a4\'76\'aa\'ba\'a4\'ba\'a6\'62\'a4\'4f\'b6\'71\'a1\'43
-\f0 <br>\
-       
-\f1 \uc0\u55356 \u57217 
-\f0  
-\f2 \'af\'53\'a7\'4f\'c5\'e5\'b3\'df\'a1\'47\'b3\'a1\'a4\'c0\'a9\'af\'b9\'42\cb3 \'bd\'fc\'bd\'4c\cb1 \'b5\'b2\'aa\'47\'b1\'4e\'c0\'f2\'b1\'6f\'a5\'bb\'b7\'bd\'a4\'df\'bf\'f4\'a1\'69\'bc\'c6\'a6\'72\'bf\'d4\'b8\'df\'a1\'6a\'c5\'e9\'c5\'e7\'a7\'e9\'a6\'a9\'a9\'ce\'af\'53\'a7\'4f\'ab\'fc\'a4\'de\'a1\'49
-\f0 \
+    <h1>\uc0\u55356 \u57249 \u26412 \u28304 \u24515 \u37266 \u12539 \u26032 \u24180 \u22909 \u36939 \u35338 \u24687 \u36650 \u30436  \u55357 \u56629 </h1>\
+    <p>\uc0\u10024 \u36681 \u21205 \u36650 \u30436 \u65292 \u25581 \u31034 \u20320 \u30340 2025 \u30340 \u26234 \u24935 \u35338 \u24687  \u10024 </p>\
+    <p>\uc0\u20320 \u30340 \u20839 \u22312 \u24050 \u30693 \u31572 \u26696 \u65292 \u36889 \u27425 \u65292 \u35731 \u27969 \u36681 \u30340 \u33021 \u37327 \u28858 \u20320 \u25351 \u23566 \u26041 \u21521 </p>\
+    <p><strong>\uc0\u27493 \u39519 \u65306 </strong></p>\
+    <p>\uc0\u55356 \u57151  \u36681 \u21205 \u36650 \u30436 \u65292 \u29554 \u24471 \u19968 \u20491 \u23560 \u23660 \u26044 \u20320 \u30340 \u26032 \u24180 \u38364 \u37749 \u23383 \u25110 \u35937 \u24501 \u25976 \u23383 \u12290 <br>\
+       \uc0\u55357 \u56553  \u25226 \u20320 \u30340 \u32080 \u26524 \u20659 \u36865 \u33267 \u26412 \u28304 \u24515 \u37266  Instagram \u31169 \u35338 \u65292 \u25105 \u23559 \u28858 \u20320 \u35299 \u35712 \u36889 \u20491 \u35338 \u24687 \u65292 \u20006 \u36865 \u19978 \u19968 \u24373 \u38651 \u23376 \u21345 \u29255 \u12290 <br>\
+       \uc0\u10024  \u22312 \u21345 \u29255 \u20013 \u65292 \u20320 \u23559 \u25910 \u21040 \u20358 \u33258 \u26412 \u28304 \u24515 \u37266 \u30340 \u26234 \u24935 \u31069 \u31119 \u33287 \u27934 \u35211 \u65292 \u24171 \u21161 \u20320 \u26356 \u28165 \u26224 \u22320 \u30475 \u35211 \u33258 \u24049 \u30340 \u20839 \u22312 \u21147 \u37327 \u12290 <br>\
+       \uc0\u55356 \u57217  \u29305 \u21029 \u39514 \u21916 \u65306 \u37096 \u20998 \u24184 \u36939 \u36650 \u30436 \u32080 \u26524 \u23559 \u29554 \u24471 \u26412 \u28304 \u24515 \u37266 \u12304 \u25976 \u23383 \u35566 \u35426 \u12305 \u39636 \u39511 \u25240 \u25187 \u25110 \u29305 \u21029 \u25351 \u23566 \u65281 \
     </p>\
-    <p>
-\f1 \uc0\u55357 \u56635 
-\f0  
-\f2 \'a5\'df\'a7\'59\'c2\'e0\'b0\'ca\'a1\'41\'ac\'dd\'ac\'dd\'b7\'73\'a6\'7e\'ac\'b0\'a7\'41\'b1\'61\'a8\'d3\'a4\'b0\'bb\'f2\'b1\'d2\'a5\'dc\'a1\'49
-\f0  
-\f1 \uc0\u55357 \u56635 
-\f0 </p>\
+    <p>\uc0\u55357 \u56635  \u31435 \u21363 \u36681 \u21205 \u65292 \u30475 \u30475 \u26032 \u24180 \u28858 \u20320 \u24118 \u20358 \u20160 \u40636 \u21855 \u31034 \u65281  \u55357 \u56635 </p>\
     <div id="wheel-container">\
         <div id="pointer"></div>\
-        <canvas id="wheel" width="300" height="300"></canvas>\
+        <canvas id="wheel" width="200" height="200"></canvas>\
     </div>\
-    <button id="spin-button">
-\f2 \'b1\'db\'c2\'e0\cb3 \'bd\'fc\'bd\'4c
-\f0 \cb1 </button>\
+    <button id="spin-button">\uc0\u26059 \u36681 \u36650 \u30436 </button>\
     <div id="result"></div>\
 \
     <script>\
@@ -152,162 +93,53 @@
         const spinButton = document.getElementById("spin-button");\
         const resultText = document.getElementById("result");\
 \
-        const keywords = 
-\f3 [
-\f0 "
-\f1 \uc0\u55356 \u57088 
-\f0  
-\f2 \'c4\'b1\'b9\'ee
-\f0 ", "
-\f1 \uc0\u55357 \u56491 
-\f0  
-\f2 \'c4\'c0\'a9\'f1
-\f0 ", "
-\f1 \uc0\u55357 \u56613 
-\f0  
-\f2 \'b8\'c0\'c5\'dc
-\f0 ", "
-\f1 \uc0\u55356 \u57137 
-\f0  
-\f2 \'ab\'48\'a5\'f4
-\f0 ", "
-\f1 \uc0\u55357 \u56960 
-\f0  
-\f2 \'a6\'e6\'b0\'ca
-\f0 ", "
-\f1 \uc0\u55356 \u57098 
-\f0  
-\f2 \'ac\'79\'b0\'ca
-\f0 ", "
-\f1 \uc0\u9878 \u65039 
-\f0  
-\f2 \'c3\'ad\'a9\'77
-\f0 ", "
-\f1 \uc0\u55356 \u57119 
-\f0  
-\f2 \'ac\'f0\'af\'7d
-\f0 ", "
-\f1 \uc0\u55357 \u56470 
-\f0  
-\f2 \'b7\'52
-\f0 ", "
-\f1 \uc0\u55356 \u57263 
-\f0  
-\f2 \'b1\'4d\'aa\'60
-\f0 ", "
-\f1 \uc0\u55357 \u56481 
-\f0  
-\f2 \'af\'ab\'af\'b5\'a7\'e9\'a6\'a9\'bd\'58
-\f0 ", "
-\f1 \uc0\u55356 \u57247 \u65039 
-\f0  
-\f2 \'ad\'ad\'ae\'c9\'c0\'75\'b4\'66
-\f0 ", "
-\f1 \uc0\u55357 \u56610 
-\f0  
-\f2 \'c1\'f4\'c2\'c3\'a5\'65\'a4\'52\'be\'f7\'b7\'7c
-\f0 ", "
-\f1 \uc0\u55356 \u57226 
-\f0  
-\f2 \'c6\'46\'bb\'ee\'b0\'54\'ae\'a7\'b8\'d1\'c2\'ea
-\f0 "
-\f3 ]
-\f0 ;\
-        const colors = 
-\f3 [
-\f0 "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC"
-\f3 ]
-\f0 ;\
+        const keywords = ["\uc0\u55356 \u57088  \u35258 \u23519 ", "\u55357 \u56491  \u37323 \u25918 ", "\u55357 \u56613  \u34555 \u35722 ", "\u55356 \u57137  \u20449 \u20219 ", "\u55357 \u56960  \u34892 \u21205 ", "\u55356 \u57098  \u27969 \u21205 ", "\u9878 \u65039  \u31337 \u23450 ", "\u55356 \u57119  \u31361 \u30772 ", "\u55357 \u56470  \u24859 ", "\u55356 \u57263  \u23560 \u27880 ", "\u55357 \u56481  \u31070 \u31192 \u25240 \u25187 \u30908 ", "\u55356 \u57247 \u65039  \u38480 \u26178 \u20778 \u24800 ", "\u55357 \u56610  \u38577 \u34255 \u21344 \u21340 \u27231 \u26371 ", "\u55356 \u57226  \u38728 \u39746 \u35338 \u24687 \u35299 \u37782 "];\
+        const colors = ["#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC"];\
         const segmentAngle = (2 * Math.PI) / keywords.length;\
-        \
+\
         function drawWheel() \{\
             for (let i = 0; i < keywords.length; i++) \{\
                 ctx.beginPath();\
-                ctx.moveTo(150, 150);\
-                ctx.arc(150, 150, 150, i * segmentAngle, (i + 1) * segmentAngle);\
+                ctx.moveTo(100, 100);\
+                ctx.arc(100, 100, 100, i * segmentAngle, (i + 1) * segmentAngle);\
                 ctx.closePath();\
-                ctx.fillStyle = colors
-\f3 [
-\f0 i
-\f3 ]
-\f0 ;\
+                ctx.fillStyle = colors[i];\
                 ctx.fill();\
                 ctx.strokeStyle = "#fff";\
                 ctx.stroke();\
                 \
-                // 
-\f2 \'a5\'5b\'a4\'4a\'a4\'e5\'a6\'72
-\f0 \
                 ctx.save();\
-                ctx.translate(150, 150);\
+                ctx.translate(100, 100);\
                 ctx.rotate(i * segmentAngle + segmentAngle / 2);\
                 ctx.fillStyle = "white";\
-                ctx.font = "16px 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif"; ctx.lineWidth = 3; ctx.strokeStyle = 'black'; \
-ctx.fillStyle = 'white';  \
-              ctx.fillStyle = 'white';\
+                ctx.font = "12px 'Noto Sans TC', sans-serif";\
                 ctx.textAlign = "center";\
-                ctx.fillText(keywords
-\f3 [
-\f0 i
-\f3 ]
-\f0 , 100, 10);\
+                ctx.fillText(keywords[i], 60, 5);\
                 ctx.restore();\
             \}\
         \}\
-        \
+\
         let rotation = 0;\
         function spinWheel() \{\
-    const randomDegree = Math.floor(Math.random() * 360) + 1440; // 
-\f2 \'c5\'fd\cb3 \'bd\'fc\'bd\'4c\cb1 \'a6\'dc\'a4\'d6\'c2\'e0
-\f0  4 
-\f2 \'b0\'e9
-\f0 \
-    rotation += randomDegree;\
-    canvas.style.transition = 'transform 3s ease-out';\
-    canvas.style.transform = \cf4 \kerning1\expnd20\expndtw100
-`\cf2 \kerning1\expnd0\expndtw0 rotate($\{rotation\}deg\kerning1\expnd20\expndtw100
-)\cf4 \kerning1\expnd0\expndtw0 `\cf2 ;\
+            const randomDegree = Math.floor(Math.random() * 360) + 1440; // \uc0\u35731 \u36650 \u30436 \u33267 \u23569 \u36681  4 \u22280 \
+            rotation += randomDegree;\
+            canvas.style.transition = 'transform 3s ease-out';\
+            canvas.style.transform = `rotate($\{rotation\}deg)`;\
 \
-    setTimeout(() => \{\
-        const actualDegree = (rotation % 360); // 
-\f2 \'ad\'70\'ba\'e2\'b3\'cc\'b2\'d7\'a8\'a4\'ab\'d7
-\f0 \
-        let correctedDegree = (360 - actualDegree + 270) % 360; // 
-\f2 \'ad\'d7\'a5\'bf\'b9\'ef\'c0\'b3\'a8\'a4\'ab\'d7
-\f0  (+270 
-\f2 \'c5\'fd\'ab\'fc\'b0\'77\'b9\'ef\'c0\'b3
-\f0  12 
-\f2 \'c2\'49\'a4\'e8\'a6\'56
-\f0 )\
+            setTimeout(() => \{\
+                const actualDegree = (rotation % 360); // \uc0\u35336 \u31639 \u26368 \u32066 \u35282 \u24230 \
+                let correctedDegree = (360 - actualDegree + 270) % 360; // \uc0\u20462 \u27491 \u23565 \u25033 \u35282 \u24230  (+270 \u35731 \u25351 \u37341 \u23565 \u25033  12 \u40670 \u26041 \u21521 )\
 \
-        // 
-\f2 \'ad\'70\'ba\'e2\'a5\'bf\'bd\'54\'aa\'ba\'b0\'cf\'b6\'f4\'af\'c1\'a4\'de
-\f0 \
-        const index = Math.floor(correctedDegree / (360 / keywords.length));\
-        resultText.innerHTML = `<div style='font-size:24px; font-weight:bold; color:#D32F2F;'>
-\f1 \uc0\u55356 \u57225 
-\f0  
-\f2 \'a7\'41\'a9\'e2\'a4\'a4\'a4\'46\'a1\'47
-\f0 $\{keywords
-\f3 [
-\f0 index
-\f3 ]
-\f0 \}
-\f2 \'a1\'49
-\f0  
-\f1 \uc0\u55356 \u57225 
-\f0 </div>\
-                    <div style='font-size:18px; margin-top:5px;'>
-\f2 \'a7\'41\'aa\'ba\'b7\'73\'a6\'7e\'b4\'bc\'bc\'7a\'b0\'54\'ae\'a7\'a4\'77\'b7\'c7\'b3\'c6\'a6\'6e\'a1\'41\'bd\'d0\'a8\'70\'b0\'54
-\f0  @originpaths 
-\f2 \'bb\'e2\'a8\'fa\'a7\'41\'aa\'ba\'b1\'4d\'c4\'dd\'ab\'fc\'a4\'de\'bb\'50\'c5\'e5\'b3\'df\'a1\'49
-\f0  
-\f1 \uc0\u10024 \u55357 \u56491 
-\f0 </div>`;\
+                // \uc0\u35336 \u31639 \u27491 \u30906 \u30340 \u21312 \u22602 \u32034 \u24341 \
+                const index = Math.floor(correctedDegree / (360 / keywords.length));\
+                resultText.innerHTML = `<div style='font-size:24px; font-weight:bold; color:#D32F2F;'>\uc0\u55356 \u57225  \u20320 \u25277 \u20013 \u20102 \u65306 $\{keywords[index]\}\u65281  \u55356 \u57225 </div>\
+                    <div style='font-size:18px; margin-top:5px;'>\uc0\u20320 \u30340 \u26032 \u24180 \u26234 \u24935 \u35338 \u24687 \u24050 \u28310 \u20633 \u22909 \u65292 \u35531 \u31169 \u35338  @originpaths \u38936 \u21462 \u20320 \u30340 \u23560 \u23660 \u25351 \u24341 \u33287 \u39514 \u21916 \u65281  \u10024 \u55357 \u56491 </div>`;\
             \}, 3000);\
         \}\
+\
         spinButton.addEventListener("click", spinWheel);\
         drawWheel();\
     </script>\
 </body>\
-</html>}
+</html>\
+}
