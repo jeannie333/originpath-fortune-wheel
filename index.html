@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎡本源心醒‧新年時來運轉輪盤 🔵</title>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            text-align: center;
+            background-color: #EDE7E2;
+            margin: 0;
+            padding: 0;
+            color: #34371a;
+        }
+        h1 {
+            color: #345E7D;
+            margin-top: 20px;
+        }
+        #wheel-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid #34371a;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #spin-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #345E7D;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #spin-button:hover {
+            background-color: #6DA7CC;
+        }
+        #spin-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #34371a;
+            padding: 0 20px;
+        }
+        #pointer {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 0 20px 40px; /* 等邊三角形 */
+            border-color: transparent transparent transparent red;
+            transform: translate(-50%, -50%) rotate(180deg); /* 旋轉180度 */
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔵本源心醒‧新年好運訊息輪盤🎡</h1>
+    <p>✨你的內在已知答案，這次，讓流轉的能量為你指引方向✨<p>
+    <p><strong>步驟：</strong></p>
+    <p>🌿 點擊轉動輪盤，獲得一個專屬於你的新年關鍵字或驚喜。<br>
+       📩 把你的結果截圖傳送至本源心醒 Instagram 私訊，我將為你解讀這個訊息，並送上一張電子卡片。<br>
+       ✨ 在卡片中，你將收到來自本源心醒的智慧祝福與洞見，幫助你更清晰地看見自己的內在力量。<br>
+       🎁 特別驚喜：部分幸運輪盤結果將獲得本源心醒能量狀態諮詢體驗折扣或特別引導！
+    </p>
+    <p>🔻揭示你的2025的智慧訊息🔻</p>
+    <div id="wheel-container">
+        <div id="pointer"></div>
+        <canvas id="wheel" width="400" height="400"></canvas>
+    </div>
+    <button id="spin-button">旋轉輪盤，揭示屬於你的新年智慧訊息</button>
+    <div id="result"></div>
+
+    <script>
+        const canvas = document.getElementById("wheel");
+        const ctx = canvas.getContext("2d");
+        const spinButton = document.getElementById("spin-button");
+        const resultText = document.getElementById("result");
+
+        const keywords = [
+            "🎊 靈魂訊息解鎖", "🌀 覺察", "💫 釋放", "🔥 蛻變", "💡 神秘折扣碼", "🌱 信任", "🚀 行動", "🎟️ 限時優惠", 
+            "🌊 流動", "⚖️ 穩定", "🌟 突破", "💖 愛", "🎯 專注", "🎟️ 一對一直覺訊息", "🧧紅包機會"
+        ];
+        const colors = [
+            "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", 
+            "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#345E7D"
+        ];
+        const segmentAngle = (2 * Math.PI) / keywords.length;
+
+        // 檢查是否已經轉過輪盤
+        const hasSpun = localStorage.getItem("hasSpun");
+        if (hasSpun) {
+            spinButton.disabled = true;
+            resultText.innerHTML = `<div style='font-size:24px; font-weight:bold; color:#D32F2F;'>🎉 你已經轉過輪盤了！ 🎉</div>
+                <div style='font-size:18px; margin-top:5px;'>感謝你的參與，請私訊 @originpaths 領取你的專屬指引與驚喜！ ✨💫</div>`;
+        }
+
+        function drawWheel() {
+            console.log("Drawing wheel..."); // 調試訊息
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < keywords.length; i++) {
+                ctx.beginPath();
+                ctx.moveTo(200, 200);
+                ctx.arc(200, 200, 200, i * segmentAngle, (i + 1) * segmentAngle);
+                ctx.closePath();
+                ctx.fillStyle = colors[i];
+                ctx.fill();
+                ctx.strokeStyle = "#fff";
+                ctx.stroke();
+
+                ctx.save();
+                ctx.translate(200, 200);
+                ctx.rotate(i * segmentAngle + segmentAngle / 2);
+                ctx.fillStyle = "white";
+                ctx.font = "14px 'Noto Sans TC', sans-serif";
+                ctx.textAlign = "center";
+                ctx.fillText(keywords[i], 130, 10);
+                ctx.restore();
+            }
+        }
+
+        let rotation = 0;
+        function spinWheel() {
+            spinButton.disabled = true;
+            const randomDegree = Math.floor(Math.random() * 360) + 1440; // 隨機旋轉角度
+            rotation += randomDegree;
+            canvas.style.transition = 'transform 3s ease-out';
+            canvas.style.transform = `rotate(${rotation}deg)`;
+
+            setTimeout(() => {
+                const actualDegree = rotation % 360;
+                const correctedDegree = (360 - actualDegree) % 360; // 修正角度計算
+                const index = Math.floor(correctedDegree / (360 / keywords.length));
+                resultText.innerHTML = `<div style='font-size:24px; font-weight:bold; color:#D32F2F;'>🎉 你抽中了：${keywords[index]}！ 🎉</div>
+                    <div style='font-size:18px; margin-top:5px;'>你的新年智慧訊息已準備好，請私訊 @originpaths 領取你的專屬指引與驚喜！ ✨💫</div>`;
+                
+                // 將狀態存儲到 LocalStorage
+                localStorage.setItem("hasSpun", "true");
+            }, 3000);
+        }
+
+        spinButton.addEventListener("click", spinWheel);
+        drawWheel(); // 繪製輪盤
+    </script>
+</body>
