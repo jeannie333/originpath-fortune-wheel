@@ -1,0 +1,313 @@
+{\rtf1\ansi\ansicpg950\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 .AppleColorEmojiUI;\f2\fnil\fcharset136 PingFangTC-Regular;
+\f3\fnil\fcharset136 .CJKSymbolsFallbackTC-Regular;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red253\green177\blue24;\red255\green255\blue255;
+}
+{\*\expandedcolortbl;;\csgray\c100000\c90000;\cspthree\c96064\c75172\c28165\c80000;\csgray\c100000\c18000;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl360\slmult1\slminimum640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 <!DOCTYPE html>\
+<html lang="zh-TW">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>
+\f1 \uc0\u55356 \u57249 
+\f2 \'a5\'bb\'b7\'bd\'a4\'df\'bf\'f4
+\f3 \'a1\'45
+\f2 \'b7\'73\'a6\'7e\'a6\'6e\'b9\'42\'b0\'54\'ae\'a7\cb3 \'bd\'fc\'bd\'4c
+\f0 \cb1  
+\f1 \uc0\u55357 \u56629 
+\f0 </title>\
+    <style>\
+        body \{\
+            font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;\
+            text-align: center;\
+            background-color: #EDE7E2;\
+            margin: 0;\
+            padding: 0;\
+            color: #34371a;\
+        \}\
+        h1 \{\
+            color: #345E7D;\
+            margin-top: 20px;\
+        \}\
+        #wheel-container \{\
+            position: relative;\
+            width: 600px;\
+            height: 600px;\
+            margin: 50px auto;\
+        \}\
+        canvas \{\
+            width: 100%;\
+            height: 100%;\
+            border-radius: 50%;\
+            border: 5px solid #34371a;\
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);\
+        \}\
+        #spin-button \{\
+            margin-top: 20px;\
+            padding: 10px 20px;\
+            font-size: 16px;\
+            background-color: #345E7D;\
+            color: white;\
+            border: none;\
+            border-radius: 5px;\
+            cursor: pointer;\
+        \}\
+        #spin-button:hover \{\
+            background-color: #6DA7CC;\
+        \}\
+        #result \{\
+            margin-top: 20px;\
+            font-size: 20px;\
+            color: #34371a;\
+        \}\
+    #pointer \{\
+            position: absolute;\
+            top: -20px;\
+            left: 50%;\
+            width: 0;\
+            height: 0;\
+            border-left: 25px solid transparent;\
+            border-right: 25px solid transparent;\
+            border-top: 50px solid red;\
+            transform: translateX(-50%);\
+            z-index: 10;\
+        \}\
+            transform: translateX(-50%);\
+            z-index: 10;\
+        \}\
+            transform: translateX(-50%);\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <h1>
+\f1 \uc0\u55356 \u57249 
+\f2 \'a5\'bb\'b7\'bd\'a4\'df\'bf\'f4
+\f3 \'a1\'45
+\f2 \'b7\'73\'a6\'7e\'a6\'6e\'b9\'42\'b0\'54\'ae\'a7\cb3 \'bd\'fc\'bd\'4c
+\f0 \cb1  
+\f1 \uc0\u55357 \u56629 
+\f0 </h1>\
+    <p>
+\f1 \uc0\u10024 
+\f2 \'c2\'e0\'b0\'ca\cb3 \'bd\'fc\'bd\'4c\cb1 \'a1\'41\'b4\'a6\'a5\'dc\'a7\'41\'aa\'ba
+\f0 2025 
+\f2 \'aa\'ba\'b4\'bc\'bc\'7a\'b0\'54\'ae\'a7
+\f0  
+\f1 \uc0\u10024 
+\f0 </p>\
+    <p>
+\f2 \'a7\'41\'aa\'ba\'a4\'ba\'a6\'62\'a4\'77\'aa\'be\'b5\'aa\'ae\'d7\'a1\'41\'b3\'6f\'a6\'b8\'a1\'41\'c5\'fd\'ac\'79\'c2\'e0\'aa\'ba\'af\'e0\'b6\'71\'ac\'b0\'a7\'41\'ab\'fc\'a4\'de\'a4\'e8\'a6\'56
+\f0 </p>\
+    <p><strong>
+\f2 \'a8\'42\'c6\'4a\'a1\'47
+\f0 </strong></p>\
+    <p>
+\f1 \uc0\u55356 \u57151 
+\f0  
+\f2 \'c2\'e0\'b0\'ca\cb3 \'bd\'fc\'bd\'4c\cb1 \'a1\'41\'c0\'f2\'b1\'6f\'a4\'40\'ad\'d3\'b1\'4d\'c4\'dd\'a9\'f3\'a7\'41\'aa\'ba\'b7\'73\'a6\'7e\'c3\'f6\'c1\'e4\'a6\'72\'a9\'ce\'b6\'48\'bc\'78\'bc\'c6\'a6\'72\'a1\'43
+\f0 <br>\
+       
+\f1 \uc0\u55357 \u56553 
+\f0  
+\f2 \'a7\'e2\'a7\'41\'aa\'ba\'b5\'b2\'aa\'47\'b6\'c7\'b0\'65\'a6\'dc\'a5\'bb\'b7\'bd\'a4\'df\'bf\'f4
+\f0  Instagram 
+\f2 \'a8\'70\'b0\'54\'a1\'41\'a7\'da\'b1\'4e\'ac\'b0\'a7\'41\'b8\'d1\'c5\'aa\'b3\'6f\'ad\'d3\'b0\'54\'ae\'a7\'a1\'41\'a8\'c3\'b0\'65\'a4\'57\'a4\'40\'b1\'69\'b9\'71\'a4\'6c\'a5\'64\'a4\'f9\'a1\'43
+\f0 <br>\
+       
+\f1 \uc0\u10024 
+\f0  
+\f2 \'a6\'62\'a5\'64\'a4\'f9\'a4\'a4\'a1\'41\'a7\'41\'b1\'4e\'a6\'ac\'a8\'ec\'a8\'d3\'a6\'db\'a5\'bb\'b7\'bd\'a4\'df\'bf\'f4\'aa\'ba\'b4\'bc\'bc\'7a\'af\'ac\'ba\'d6\'bb\'50\'ac\'7d\'a8\'a3\'a1\'41\'c0\'b0\'a7\'55\'a7\'41\'a7\'f3\'b2\'4d\'b4\'b7\'a6\'61\'ac\'dd\'a8\'a3\'a6\'db\'a4\'76\'aa\'ba\'a4\'ba\'a6\'62\'a4\'4f\'b6\'71\'a1\'43
+\f0 <br>\
+       
+\f1 \uc0\u55356 \u57217 
+\f0  
+\f2 \'af\'53\'a7\'4f\'c5\'e5\'b3\'df\'a1\'47\'b3\'a1\'a4\'c0\'a9\'af\'b9\'42\cb3 \'bd\'fc\'bd\'4c\cb1 \'b5\'b2\'aa\'47\'b1\'4e\'c0\'f2\'b1\'6f\'a5\'bb\'b7\'bd\'a4\'df\'bf\'f4\'a1\'69\'bc\'c6\'a6\'72\'bf\'d4\'b8\'df\'a1\'6a\'c5\'e9\'c5\'e7\'a7\'e9\'a6\'a9\'a9\'ce\'af\'53\'a7\'4f\'ab\'fc\'a4\'de\'a1\'49
+\f0 \
+    </p>\
+    <p>
+\f1 \uc0\u55357 \u56635 
+\f0  
+\f2 \'a5\'df\'a7\'59\'c2\'e0\'b0\'ca\'a1\'41\'ac\'dd\'ac\'dd\'b7\'73\'a6\'7e\'ac\'b0\'a7\'41\'b1\'61\'a8\'d3\'a4\'b0\'bb\'f2\'b1\'d2\'a5\'dc\'a1\'49
+\f0  
+\f1 \uc0\u55357 \u56635 
+\f0 </p>\
+    <div id="wheel-container">\
+        <div id="pointer"></div>\
+        <canvas id="wheel" width="300" height="300"></canvas>\
+    </div>\
+    <button id="spin-button">
+\f2 \'b1\'db\'c2\'e0\cb3 \'bd\'fc\'bd\'4c
+\f0 \cb1 </button>\
+    <div id="result"></div>\
+\
+    <script>\
+        const canvas = document.getElementById("wheel");\
+        const ctx = canvas.getContext("2d");\
+        const spinButton = document.getElementById("spin-button");\
+        const resultText = document.getElementById("result");\
+\
+        const keywords = 
+\f3 [
+\f0 "
+\f1 \uc0\u55356 \u57088 
+\f0  
+\f2 \'c4\'b1\'b9\'ee
+\f0 ", "
+\f1 \uc0\u55357 \u56491 
+\f0  
+\f2 \'c4\'c0\'a9\'f1
+\f0 ", "
+\f1 \uc0\u55357 \u56613 
+\f0  
+\f2 \'b8\'c0\'c5\'dc
+\f0 ", "
+\f1 \uc0\u55356 \u57137 
+\f0  
+\f2 \'ab\'48\'a5\'f4
+\f0 ", "
+\f1 \uc0\u55357 \u56960 
+\f0  
+\f2 \'a6\'e6\'b0\'ca
+\f0 ", "
+\f1 \uc0\u55356 \u57098 
+\f0  
+\f2 \'ac\'79\'b0\'ca
+\f0 ", "
+\f1 \uc0\u9878 \u65039 
+\f0  
+\f2 \'c3\'ad\'a9\'77
+\f0 ", "
+\f1 \uc0\u55356 \u57119 
+\f0  
+\f2 \'ac\'f0\'af\'7d
+\f0 ", "
+\f1 \uc0\u55357 \u56470 
+\f0  
+\f2 \'b7\'52
+\f0 ", "
+\f1 \uc0\u55356 \u57263 
+\f0  
+\f2 \'b1\'4d\'aa\'60
+\f0 ", "
+\f1 \uc0\u55357 \u56481 
+\f0  
+\f2 \'af\'ab\'af\'b5\'a7\'e9\'a6\'a9\'bd\'58
+\f0 ", "
+\f1 \uc0\u55356 \u57247 \u65039 
+\f0  
+\f2 \'ad\'ad\'ae\'c9\'c0\'75\'b4\'66
+\f0 ", "
+\f1 \uc0\u55357 \u56610 
+\f0  
+\f2 \'c1\'f4\'c2\'c3\'a5\'65\'a4\'52\'be\'f7\'b7\'7c
+\f0 ", "
+\f1 \uc0\u55356 \u57226 
+\f0  
+\f2 \'c6\'46\'bb\'ee\'b0\'54\'ae\'a7\'b8\'d1\'c2\'ea
+\f0 "
+\f3 ]
+\f0 ;\
+        const colors = 
+\f3 [
+\f0 "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC", "#88A9C3", "#345E7D", "#6DA7CC"
+\f3 ]
+\f0 ;\
+        const segmentAngle = (2 * Math.PI) / keywords.length;\
+        \
+        function drawWheel() \{\
+            for (let i = 0; i < keywords.length; i++) \{\
+                ctx.beginPath();\
+                ctx.moveTo(150, 150);\
+                ctx.arc(150, 150, 150, i * segmentAngle, (i + 1) * segmentAngle);\
+                ctx.closePath();\
+                ctx.fillStyle = colors
+\f3 [
+\f0 i
+\f3 ]
+\f0 ;\
+                ctx.fill();\
+                ctx.strokeStyle = "#fff";\
+                ctx.stroke();\
+                \
+                // 
+\f2 \'a5\'5b\'a4\'4a\'a4\'e5\'a6\'72
+\f0 \
+                ctx.save();\
+                ctx.translate(150, 150);\
+                ctx.rotate(i * segmentAngle + segmentAngle / 2);\
+                ctx.fillStyle = "white";\
+                ctx.font = "16px 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif"; ctx.lineWidth = 3; ctx.strokeStyle = 'black'; \
+ctx.fillStyle = 'white';  \
+              ctx.fillStyle = 'white';\
+                ctx.textAlign = "center";\
+                ctx.fillText(keywords
+\f3 [
+\f0 i
+\f3 ]
+\f0 , 100, 10);\
+                ctx.restore();\
+            \}\
+        \}\
+        \
+        let rotation = 0;\
+        function spinWheel() \{\
+    const randomDegree = Math.floor(Math.random() * 360) + 1440; // 
+\f2 \'c5\'fd\cb3 \'bd\'fc\'bd\'4c\cb1 \'a6\'dc\'a4\'d6\'c2\'e0
+\f0  4 
+\f2 \'b0\'e9
+\f0 \
+    rotation += randomDegree;\
+    canvas.style.transition = 'transform 3s ease-out';\
+    canvas.style.transform = \cf4 \kerning1\expnd20\expndtw100
+`\cf2 \kerning1\expnd0\expndtw0 rotate($\{rotation\}deg\kerning1\expnd20\expndtw100
+)\cf4 \kerning1\expnd0\expndtw0 `\cf2 ;\
+\
+    setTimeout(() => \{\
+        const actualDegree = (rotation % 360); // 
+\f2 \'ad\'70\'ba\'e2\'b3\'cc\'b2\'d7\'a8\'a4\'ab\'d7
+\f0 \
+        let correctedDegree = (360 - actualDegree + 270) % 360; // 
+\f2 \'ad\'d7\'a5\'bf\'b9\'ef\'c0\'b3\'a8\'a4\'ab\'d7
+\f0  (+270 
+\f2 \'c5\'fd\'ab\'fc\'b0\'77\'b9\'ef\'c0\'b3
+\f0  12 
+\f2 \'c2\'49\'a4\'e8\'a6\'56
+\f0 )\
+\
+        // 
+\f2 \'ad\'70\'ba\'e2\'a5\'bf\'bd\'54\'aa\'ba\'b0\'cf\'b6\'f4\'af\'c1\'a4\'de
+\f0 \
+        const index = Math.floor(correctedDegree / (360 / keywords.length));\
+        resultText.innerHTML = `<div style='font-size:24px; font-weight:bold; color:#D32F2F;'>
+\f1 \uc0\u55356 \u57225 
+\f0  
+\f2 \'a7\'41\'a9\'e2\'a4\'a4\'a4\'46\'a1\'47
+\f0 $\{keywords
+\f3 [
+\f0 index
+\f3 ]
+\f0 \}
+\f2 \'a1\'49
+\f0  
+\f1 \uc0\u55356 \u57225 
+\f0 </div>\
+                    <div style='font-size:18px; margin-top:5px;'>
+\f2 \'a7\'41\'aa\'ba\'b7\'73\'a6\'7e\'b4\'bc\'bc\'7a\'b0\'54\'ae\'a7\'a4\'77\'b7\'c7\'b3\'c6\'a6\'6e\'a1\'41\'bd\'d0\'a8\'70\'b0\'54
+\f0  @originpaths 
+\f2 \'bb\'e2\'a8\'fa\'a7\'41\'aa\'ba\'b1\'4d\'c4\'dd\'ab\'fc\'a4\'de\'bb\'50\'c5\'e5\'b3\'df\'a1\'49
+\f0  
+\f1 \uc0\u10024 \u55357 \u56491 
+\f0 </div>`;\
+            \}, 3000);\
+        \}\
+        spinButton.addEventListener("click", spinWheel);\
+        drawWheel();\
+    </script>\
+</body>\
+</html>}
