@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔵本源心醒‧新年時來運轉輪🎡</title>
+    <title>🔵本源心醒‧時來運轉輪盤🎡</title>
     <style>
         body {
             font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
@@ -65,6 +65,22 @@
             transform: translate(-50%, -50%) rotate(180deg); /* 旋轉180度 */
             z-index: 10;
         }
+        /* Instagram 按鈕樣式 */
+        .ig-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .ig-button:hover {
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -76,7 +92,7 @@
        ✨ 你將收到解讀，幫助你更清晰地看見自己的內在力量<br>
        🎁 部分幸運輪盤結果將獲得「本源心醒」能量狀態解析體驗折扣或特別引導
     </p>
-    <p>🔻你的2025的智慧訊息🔻</p>
+    <p>🔻你的2025智慧訊息🔻</p>
 
     <!-- 結果顯示 -->
     <div id="result"></div>
@@ -111,7 +127,8 @@
         if (hasSpun) {
             spinButton.disabled = true;
             resultText.innerHTML = `<div style='font-size:24px; font-weight:bold; color:#D32F2F;'>🎉 你已經轉過輪盤了！ 🎉</div>
-                <div style='font-size:18px; margin-top:5px;'>感謝你的參與，請私訊 @originpaths 領取你的專屬指引與驚喜！ ✨💫</div>`;
+                <div style='font-size:18px; margin-top:5px;'>感謝你的參與，請私訊 @originpaths 領取你的專屬指引與驚喜！ ✨💫</div>
+                <a href="https://www.instagram.com/originpaths" class="ig-button" target="_blank">前往 Instagram 主頁</a>`;
         }
 
         function drawWheel() {
@@ -152,7 +169,8 @@
                 const correctedDegree = (360 - actualDegree) % 360; // 修正角度計算
                 const index = Math.floor(correctedDegree / (360 / keywords.length));
                 resultText.innerHTML = `<div style='font-size:24px; font-weight:bold; color:#D32F2F;'>🎉 你抽中了：${keywords[index]}！ 🎉</div>
-                    <div style='font-size:18px; margin-top:5px;'>你的新年智慧訊息已準備好，請私訊 @originpaths 領取你的專屬指引與驚喜！ ✨💫</div>`;
+                    <div style='font-size:18px; margin-top:5px;'>你的新年智慧訊息已準備好，請私訊 @originpaths 領取你的專屬指引與驚喜！ ✨💫</div>
+                    <a href="https://www.instagram.com/originpaths" class="ig-button" target="_blank">前往 Instagram 主頁</a>`;
                 
                 // 將狀態存儲到 LocalStorage
                 localStorage.setItem("hasSpun", "true");
