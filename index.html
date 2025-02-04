@@ -71,18 +71,24 @@
     <h1>🔵本源心醒‧新年好運訊息輪盤🎡</h1>
     <p>✨你的內在已知答案，這次，讓流轉的能量為你指引方向✨<p>
     <p><strong>步驟：</strong></p>
-    <p>🌿 點擊轉動輪盤，獲得一個專屬於你的新年關鍵字或驚喜。<br>
-       📩 把你的結果截圖傳送至本源心醒 Instagram 私訊，我將為你解讀這個訊息，並送上一張電子卡片。<br>
-       ✨ 在卡片中，你將收到來自本源心醒的智慧祝福與洞見，幫助你更清晰地看見自己的內在力量。<br>
+    <p>🌿 心中默念上面的句子後，點擊轉動輪盤<br>
+       📩 將結果截圖傳送至本源心醒 Instagram 私訊，我將為你解讀這個訊息，並送上一張電子卡片<br>
+       ✨ 在卡片中，你將收到來自本源心醒的智慧話語與祝福，幫助你更清晰地看見自己的內在力量<br>
        🎁 特別驚喜：部分幸運輪盤結果將獲得本源心醒能量狀態諮詢體驗折扣或特別引導！
     </p>
     <p>🔻揭示你的2025的智慧訊息🔻</p>
+
+    <!-- 結果顯示 -->
+    <div id="result"></div>
+
+    <!-- 旋轉按鈕 -->
+    <button id="spin-button">旋轉輪盤，揭示屬於你的新年智慧訊息</button>
+
+    <!-- 輪盤 -->
     <div id="wheel-container">
         <div id="pointer"></div>
         <canvas id="wheel" width="400" height="400"></canvas>
     </div>
-    <button id="spin-button">旋轉輪盤，揭示屬於你的新年智慧訊息</button>
-    <div id="result"></div>
 
     <script>
         const canvas = document.getElementById("wheel");
@@ -157,3 +163,4 @@
         drawWheel(); // 繪製輪盤
     </script>
 </body>
+</html>
