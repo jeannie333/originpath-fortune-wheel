@@ -168,7 +168,7 @@
                 const actualDegree = rotation % 360;
                 const correctedDegree = (360 - actualDegree) % 360; // 修正角度計算
                 const index = Math.floor(correctedDegree / (360 / keywords.length));
-                resultText.innerHTML = `<div style='font-size:24px; font-weight:bold; color:#D32F2F;'>🎉 你抽中了：${keywords[index]}！ 🎉</div>
+                resultText.innerHTML = `<div style='font-size:24px; font-weight:bold; color:#D32F2F;'>🎉 你的關鍵字：${keywords[index]}！ 🎉</div>
                     <div style='font-size:18px; margin-top:5px;'>你的新年智慧訊息已準備好，請私訊 @originpaths 領取你的專屬指引與驚喜！ ✨💫</div>
                     <a href="https://www.instagram.com/originpaths" class="ig-button" target="_blank">前往 Instagram 主頁</a>`;
                 
